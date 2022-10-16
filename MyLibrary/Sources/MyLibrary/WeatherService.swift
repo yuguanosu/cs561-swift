@@ -4,6 +4,7 @@ public protocol WeatherService {
     func getTemperature() async throws -> Int
 }
 
+
 class WeatherServiceImpl: WeatherService {
     let url = "https://api.openweathermap.org/data/2.5/weather?q=corvallis&units=imperial&appid=<INSERT YOUR API KEY HERE>"
 
@@ -24,7 +25,7 @@ class WeatherServiceImpl: WeatherService {
     }
 }
 
-private struct Weather: Decodable {
+struct Weather: Decodable {
     let main: Main
 
     struct Main: Decodable {
