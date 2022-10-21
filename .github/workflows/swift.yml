@@ -6,6 +6,8 @@ name: Swift
 on:
   push:
     branches: [ "Guan/add-test" ]
+  pull_request:
+    branches: [ "Guan/add-test" ]
 
 jobs:
   build-mockserver:
