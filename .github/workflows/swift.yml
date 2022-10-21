@@ -8,7 +8,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-mockserver:
+  build:
     name: ift ${{ matrix.swift }} on ${{ matrix.os }}
     
     runs-on: ${{ ubuntu-latest }}
@@ -22,8 +22,7 @@ jobs:
       - working-directory: ./myapp
       - name: Use Node.js
         uses: actions/setup-node@v3
-        with:
-          node-version: '14'
+        
       - run: npm ci
       - run: npm run build --if-present
       - run: npm install
@@ -32,10 +31,7 @@ jobs:
       - run: curl "http://localhost:3000/data/2.5/weather"
       
   
-      - uses: fwal/setup-swift@2040b795e5c453c3a05fcb8316496afc8a74f192
-        with:
-          swift-version: ${{ matrix.swift }}
-      - uses: actions/checkout@v3
+  
       - working-directory: ./cs561-swift/MyLibrary
       - name: Build
         run: swift build
