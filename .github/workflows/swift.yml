@@ -41,11 +41,12 @@ jobs:
       
   
   
-      - working-directory: ./cs561-swift/MyLibrary
+      
       - name: Build
+        working-directory: ./MyLibrary
         run: swift build
         
-      - working-directory: ./cs561-swift/MyLibrary
       - name: Run tests
+        working-directory: ./MyLibrary
         run: swift test --enable-code-coverage
         
