@@ -101,7 +101,6 @@ final class MyLibraryTests: XCTestCase {
         let myTemp = try await weatherService.getTemperature()
         //Then
         //XCTAssertNotNil(myTemp)
-
         XCTAssertEqual(myTemp, 293.64)
     }
 
