@@ -4,7 +4,7 @@ const port = 3000
 
 // new API route: GET /users, returning a list of users
 app.get('/data/2.5/weather', (request, response) => {
-  response.json([
+  response.json(
     {
         "coord": {
           "lon": -123.26,
@@ -48,7 +48,7 @@ app.get('/data/2.5/weather', (request, response) => {
         "name": "Corvallis",
         "cod": 200
       }
-  ]);
+  );
 });
 
 // DELETE user
