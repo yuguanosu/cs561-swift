@@ -100,9 +100,9 @@ final class MyLibraryTests: XCTestCase {
         //When
         let myTemp = try await weatherService.getTemperature()
         //Then
-        XCTAssertNotNil(myTemp)
+        //XCTAssertNotNil(myTemp)
 
-        //XCTAssertEqual(myTemp, 80)
+        XCTAssertEqual(myTemp, 293.64)
     }
 
     
