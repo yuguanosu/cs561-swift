@@ -102,7 +102,7 @@ final class MyLibraryTests: XCTestCase {
         //Then
         //XCTAssertNotNil(myTemp)
 
-        XCTAssertEqual(myTemp, 293.64)
+        XCTAssertEqual(myTemp, 293)
     }
 
     
