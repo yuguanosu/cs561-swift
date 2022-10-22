@@ -9,7 +9,7 @@ enum BaseUrl: String {
     case mockServer = "http://localhost:3000"
 }
 class WeatherServiceImpl: WeatherService {
-    let url = "\(BaseUrl.openweathermap.rawValue)/data/2.5/weather?q=corvallis&units=imperial&appid=4d063a9f4c350cebe7ca77110ffc03d5"
+    let url = "\(BaseUrl.mockServer.rawValue)/data/2.5/weather"
 
     func getTemperature() async throws -> Int {
         return try await withCheckedThrowingContinuation { continuation in
